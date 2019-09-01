@@ -1,0 +1,31 @@
+# default.custom.yaml
+# 设定备选词数量，定义输入方案
+
+patch:
+  menu/page_size: 6
+
+  schema_list:
+    # - schema: luna_pinyin
+    # - schema: cangjie5
+    # - schema: luna_pinyin_fluency
+    - schema: luna_pinyin_simp
+    - schema: luna_pinyin_tw
+
+  key_binder/bindings:
+    - when: paging
+      accept: minus
+      send: Page_Up
+    - when: has_menu
+      accept: equal
+      send: Page_Down
+
+  # capslock 键切换英文并输出大写
+  ascii_composer/good_old_caps_lock: false
+  # 输入法中英文状态快捷键
+  ascii_composer/switch_key:
+    Caps_Lock: commit_code
+    Control_L: noop
+    Control_R: noop
+    # 按下左 shift 英文字符直接上屏，不需要再次回车，输入法保持英文状态
+    Shift_L: commit_code
+    Shift_R: noop
