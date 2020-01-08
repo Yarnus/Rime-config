@@ -2,12 +2,9 @@
 # 设定备选词数量，定义输入方案
 
 patch:
-  menu/page_size: 6
+  menu/page_size: 5
 
   schema_list:
-    # - schema: luna_pinyin
-    # - schema: cangjie5
-    # - schema: luna_pinyin_fluency
     - schema: luna_pinyin_simp
     - schema: luna_pinyin_tw
 
@@ -29,3 +26,6 @@ patch:
     # 按下左 shift 英文字符直接上屏，不需要再次回车，输入法保持英文状态
     Shift_L: commit_code
     Shift_R: noop
+
+  translator/dictionary: luna_pinyin.extended
+

@@ -2,6 +2,7 @@ patch:
   show_notifications_when: never           # 状态通知，适当，也可设为全开（always）全关（never）
   #show_notifications_when: appropriate          # 状态通知，适当，也可设为全开（always）全关（never）
 
+  translator/dictionary: luna_pinyin.extended
   style:
     #color_scheme: kost_temple # 默认皮肤在squirrel.yaml中查看
     color_scheme: mojave_dark
